@@ -37,7 +37,7 @@ function Contact() {
 
     return (
         <div style={{ padding: "20px", maxWidth: "500px", margin: "0 auto" }}>
-            <h2>Contact Us</h2>
+            <h2 className='App-heading'>Contact Us</h2>
             <form onSubmit={handleSubmit}>
                 <div style={{ marginBottom: "15px" }}>
                     <label htmlFor="name" style={{ display: "block", marginBottom: "5px" }}>

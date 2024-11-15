@@ -3,7 +3,7 @@ import React from 'react';
 const HomePage = () => {
   return (
     <div className="home-page">
-      <header>
+      <header className='App-heading'>
         <h1>Welcome to Laravel Learning Hub</h1>
         <p>Your one-stop platform to master Laravel from beginner to advanced levels!</p>
       </header>
@@ -40,7 +40,7 @@ const HomePage = () => {
           <div className="col-md-4">
             <div className="card">
               <img
-                src="https://via.placeholder.com/400x250"
+                src="https://media.istockphoto.com/id/1500238408/photo/program-code-development-icon-on-a-digital-lcd-display-with-reflection.webp?b=1&s=612x612&w=0&k=20&c=PB45SiRelu95ne_GCzPcNJ7XZ0eN1nB_c-nBIAB1dFg="
                 className="card-img-top"
                 alt="Laravel Basics"
               />
@@ -49,7 +49,7 @@ const HomePage = () => {
                 <p className="card-text">
                   Learn the fundamentals of Laravel, from routing to working with databases.
                 </p>
-                <button className="btn btn-primary">Start Learning</button>
+                <a href='https://laravel-tech.blogspot.com/2024/10/laravel-tutorial-for-beginners.html' className="btn btn-primary">Start Learning</a>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ const HomePage = () => {
           <div className="col-md-4">
             <div className="card">
               <img
-                src="https://via.placeholder.com/400x250"
+                src="https://cdn.pixabay.com/photo/2020/08/16/03/30/remote-5491798_640.png"
                 className="card-img-top"
                 alt="Advanced Laravel"
               />
@@ -66,7 +66,7 @@ const HomePage = () => {
                 <p className="card-text">
                   Take your Laravel skills to the next level with advanced techniques and features.
                 </p>
-                <button className="btn btn-primary">Start Learning</button>
+                <a href='https://laravel-tech.blogspot.com/2024/10/user-roles-and-permissions-in-laravel.html' className="btn btn-primary">Start Learning</a>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ const HomePage = () => {
           <div className="col-md-4">
             <div className="card">
               <img
-                src="https://via.placeholder.com/400x250"
+                src="https://laraveldaily.com/uploads/2021/10/Screenshot-2021-10-05-at-08.47.51-1024x332.png"
                 className="card-img-top"
                 alt="Laravel & Vue.js"
               />
@@ -83,7 +83,7 @@ const HomePage = () => {
                 <p className="card-text">
                   Learn how to integrate Vue.js with Laravel for dynamic frontend applications.
                 </p>
-                <button className="btn btn-primary">Start Learning</button>
+                <a href='https://laraveldaily.com/post/laravel-8-vue-3-crud-composition-api' className="btn btn-primary">Start Learning</a>
               </div>
             </div>
           </div>

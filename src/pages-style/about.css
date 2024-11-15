@@ -1,0 +1,78 @@
+/* about.css */
+
+.about-us {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .App-heading {
+    text-align: center;
+    color: #1a73e8;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #intro, #what-we-do, #why-choose-us, #join-us {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1a73e8;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  p {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+  }
+  
+  #why-choose-us ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #1a73e8;
+    font-weight: bold;
+  }
+  
+  #join-us p {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  footer p {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  

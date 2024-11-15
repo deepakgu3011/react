@@ -5,6 +5,7 @@ import Contact from './pages/contact';
 import AboutUs from './pages/about';
 import Footer from './pages/footer';
 import './App.css';
+import PrivacyPolicy from './pages/privacy-policy';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             <Link className="nav-link" to="/contact">Contact</Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/privacy-policy">Privacy Policy</Link>
+          </li>
+          <li className="nav-item">
             <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">
               Disabled
             </a>
@@ -31,6 +35,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </div>
