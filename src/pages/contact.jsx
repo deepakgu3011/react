@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import  db  from "../firebase"; // Make sure this path is correct
+import db from "../firebase"; // Make sure this path is correct
 import { collection, addDoc } from "firebase/firestore";
 
 function Contact() {
@@ -8,6 +8,7 @@ function Contact() {
         email: "",
         message: ""
     });
+    const [isLoading, setIsLoading] = useState(false); // Loading state
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -16,8 +17,9 @@ function Contact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true); // Start loading
+
         try {
-            // Ensure collection reference is correct
             const usersCollection = collection(db, "usersq");
             await addDoc(usersCollection, {
                 name: formData.name,
@@ -32,12 +34,14 @@ function Contact() {
             });
         } catch (error) {
             console.error("Error adding document: ", error);
+        } finally {
+            setIsLoading(false); // Stop loading
         }
     };
 
     return (
         <div style={{ padding: "20px", maxWidth: "500px", margin: "0 auto" }}>
-            <h2 className='App-heading'>Contact Us</h2>
+            <h2 className="App-heading">Contact Us</h2>
             <form onSubmit={handleSubmit}>
                 <div style={{ marginBottom: "15px" }}>
                     <label htmlFor="name" style={{ display: "block", marginBottom: "5px" }}>
@@ -55,7 +59,7 @@ function Contact() {
                             border: "1px solid #ccc",
                             borderRadius: "4px"
                         }}
-                        required
+                        
                     />
                 </div>
                 <div style={{ marginBottom: "15px" }}>
@@ -74,7 +78,7 @@ function Contact() {
                             border: "1px solid #ccc",
                             borderRadius: "4px"
                         }}
-                        required
+                        
                     />
                 </div>
                 <div style={{ marginBottom: "15px" }}>
@@ -93,7 +97,7 @@ function Contact() {
                             borderRadius: "4px",
                             height: "100px"
                         }}
-                        required
+                        
                     ></textarea>
                 </div>
                 <button
@@ -104,10 +108,12 @@ function Contact() {
                         color: "#fff",
                         border: "none",
                         borderRadius: "4px",
-                        cursor: "pointer"
+                        cursor: isLoading ? "not-allowed" : "pointer",
+                        opacity: isLoading ? 0.7 : 1
                     }}
+                    disabled={isLoading} // Disable button while loading
                 >
-                    Submit
+                    {isLoading ? "Submitting..." : "Submit"} {/* Show loading text */}
                 </button>
             </form>
         </div>
